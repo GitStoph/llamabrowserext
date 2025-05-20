@@ -11,13 +11,13 @@ function updateCount() {
   counterEl.textContent = `${words} word${words !== 1 ? 's' : ''}, ${chars} char${chars !== 1 ? 's' : ''}`;
 }
 
-function fixGrammar() {
+function doShit() {
   const input = inputEl.value;
   if (!input.trim()) return;
   spinnerEl.style.display = "block";
   outputEl.textContent = "";
 
-  chrome.runtime.sendMessage({ type: "fixGrammar", text: input }, (response) => {
+  chrome.runtime.sendMessage({ type: "doShit", text: input }, (response) => {
     spinnerEl.style.display = "none";
     if (chrome.runtime.lastError) {
       outputEl.textContent = `Error: ${chrome.runtime.lastError.message}`;
@@ -28,12 +28,12 @@ function fixGrammar() {
   });
 }
 
-submitBtn.addEventListener("click", fixGrammar);
+submitBtn.addEventListener("click", doShit);
 
 inputEl.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
-    fixGrammar();
+    doShit();
   }
 });
 
