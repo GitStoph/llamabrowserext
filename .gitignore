@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+# VSCode settings
+.vscode/
+.code-workspace
+
+# Chrome Extension build artifacts
+*.zip
+*.crx
+*.pem
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Node / proxy development files (if added later)
+node_modules/
+dist/
+.env
+
+# OS-specific junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore user configs
+*.swp
+*.swo
+*.bak
