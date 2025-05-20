@@ -1,4 +1,4 @@
-# 📝 Ollama Grammar Fixer Chrome Extension
+# 📝 Ollama Local LLM Chrome Extension
 
 A lightweight Chrome extension that uses a **local Ollama LLM** (like LLaMA 3) to fix grammar and spelling in selected or typed text. Fast, private, and offline-friendly.
 
@@ -32,6 +32,7 @@ http://localhost:11434/api/generate
 
 …which is the Ollama local server. It uses a prompt like:
 
+It USED to fix grammar. now it just answers concisely!
 > Fix the grammar and spelling in the following text:  
 > `"i has a apple"`
 
